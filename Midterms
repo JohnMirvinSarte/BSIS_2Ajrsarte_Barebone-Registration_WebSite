@@ -1,0 +1,81 @@
+-- Table structure for table `table1_client`
+--
+
+CREATE TABLE `table1_client` (
+  `Firstname` varchar(55) NOT NULL,
+  `Middlename` varchar(55) NOT NULL,
+  `Lastname` varchar(55) NOT NULL,
+  `Address` text NOT NULL,
+  `Sex` int(11) NOT NULL,
+  `Age` varchar(25) NOT NULL,
+  `Fitnesslevel` varchar(55) NOT NULL,
+  `Lengthofworkout` varchar(25) NOT NULL,
+  `Typeofworkout` varchar(55) NOT NULL,
+  `Workoutgoals` varchar(55) NOT NULL,
+  `Accesstoequipment` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `table1_mealplan`
+--
+
+CREATE TABLE `table1_mealplan` (
+  `Meal-id` int(11) NOT NULL,
+  `Quantity` int(11) NOT NULL,
+  `Agerecommendation` int(11) NOT NULL,
+  `Calories` int(55) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `table2_consultant`
+--
+
+CREATE TABLE `table2_consultant` (
+  `consultant_id` int(11) NOT NULL,
+  `Fullname` varchar(55) NOT NULL,
+  `Type` varchar(55) NOT NULL,
+  `Datejoined` date NOT NULL,
+  `Address` varchar(55) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `table2_trainingplan`
+--
+
+CREATE TABLE `table2_trainingplan` (
+  `trainingplan_id` int(11) NOT NULL,
+  `trainingmodule` text NOT NULL,
+  `hoursrecommended` int(11) NOT NULL,
+  `quantity` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `table3_consultation`
+--
+
+CREATE TABLE `table3_consultation` (
+  `id` int(11) NOT NULL,
+  `Consultant_id` int(25) NOT NULL,
+  `Client.id` int(25) NOT NULL,
+  `Type` varchar(55) NOT NULL,
+  `Comment` varchar(55) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `table3_meal`
+--
+
+CREATE TABLE `table3_meal` (
+  `id` int(11) NOT NULL,
+  `Food` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
